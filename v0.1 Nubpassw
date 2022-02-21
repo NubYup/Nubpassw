@@ -1,0 +1,103 @@
+#⚠️warning⚠️
+
+#this version of Nubpassw is NOT secure
+
+#your encryption key is stored not very securedly on your device
+
+from cryptography.fernet import Fernet
+
+import secrets
+
+import string
+
+
+
+print("""
+
+  _   _       _                                  
+
+ | \ | |     | |                                 
+
+ |  \| |_   _| |__  _ __   __ _ ___ _____      __
+
+ | . ` | | | | '_ \| '_ \ / _` / __/ __\ \ /\ / /
+
+ | |\  | |_| | |_) | |_) | (_| \__ \__ \\ V  V / 
+
+ |_| \_|\__,_|_.__/| .__/ \__,_|___/___/ \_/\_/  
+
+                   | |                           
+
+                   |_|                           
+
+""")
+
+def crt():
+
+	h = input("Platform name: ")	a = string.ascii_letters + string.digits + string.	punctuation
+
+	c = ''.join(secrets.choice(a) for i in range(16))
+
+	d = c.encode()
+
+	keyy = Fernet.generate_key()
+
+	f = Fernet(keyy)
+
+	ab = f.encrypt(d)
+
+	tp = f.decrypt(ab)
+
+	print(tp)
+
+	i = h + ".txt"
+
+	i2 = h + "key.txt"
+
+	ts = str(ab)
+
+	key = str(keyy)
+
+	z = open(i, "w")
+
+	z.write(ts)
+
+	z.close()
+
+	z2 = open(i2, "w")
+
+	z2.write(key)
+
+	z2.close
+
+while True:
+
+	print("\n\ntype $create to create new password")
+
+	e = input("Platform: ")
+
+	if e == "$create":
+
+		crt()
+
+	else:
+
+		g = e + ".txt"
+
+		f = open(g, "r")
+
+		j = f.read()
+
+		f.close
+
+		i3 = e + "key.txt"
+
+		abc = open(i3, "r")
+
+		abc1 = abc.read()
+
+		abc.close
+
+		k = Fernet(abc)
+
+		print(k.decrypt(f))
