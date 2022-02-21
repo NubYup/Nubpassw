@@ -8,7 +8,7 @@ from cryptography.fernet import Fernet
 import secrets
 
 import string
- stor
+
 print("""
 
   _   _       _                                  
