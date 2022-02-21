@@ -14,9 +14,10 @@ ver:0.1NE
 """)
 def crt():
 	h = input("Platform name: ")
-	a = string.ascii_letters + string.digits + string.	punctuation
+	a = string.ascii_letters + string.digits + string.punctuation
 	c = ''.join(secrets.choice(a) for i in range(16))
-	d = open(h + ".str", "w")
+	print("your new password: " + c)
+	d = open(h + ".txt", "w")
 	e = d.write(c)
 	d.close
 while True:
@@ -29,3 +30,4 @@ while True:
 		g = f.read()
 		f.close
 		print(g)
+		
