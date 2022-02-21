@@ -1,4 +1,4 @@
-#v0.1 nc(non encrypted)
+#v0.1ne (non encrypted)
 import secrets
 import string
 print("""
@@ -10,7 +10,7 @@ print("""
  |_| \_|\__,_|_.__/| .__/ \__,_|___/___/ \_/\_/  
                    | |                           
                    |_|                           
-ver:0.1NC
+ver:0.1NE
 """)
 def crt():
 	h = input("Platform name: ")
