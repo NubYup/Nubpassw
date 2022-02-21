@@ -16,7 +16,7 @@ def crt():
 	h = input("Platform name: ")
 	a = string.ascii_letters + string.digits + string.punctuation
 	c = ''.join(secrets.choice(a) for i in range(16))
-	print("your new password: " + c)
+	print("your new password:     " + c)
 	d = open(h + ".txt", "w")
 	e = d.write(c)
 	d.close
